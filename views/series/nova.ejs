@@ -10,8 +10,8 @@
                 <label for="name">Nome da Série</label>
                 <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Informe o nome da série">
                 <small id="nameHelp" class="form-text text-muted">Nome da série a ser salvo</small>
-                <% if(errors){ %>
-                    ERRO
+                <% if(errors && errors.indexOf('name')>=0){ %>
+                <small id="nameHelp" class="form-text text-muted">Por favor insira o nome da série</small>
                 <% } %>             
              </div>
                <div class="form-group">
